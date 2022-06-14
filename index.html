@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en-us">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Expense Tracker</title>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+    <link rel="stylesheet" href="app.css">
+</head>
+
+<body>
+
+    <section class="section">
+        <div class="container box">
+            <div class="has-text-centered">
+                <h1 class="is-size-1 has-text-weight-bold has-text-black">Expense Tracker</h1>
+                <h2 class="is-size-3 has-text-weight-semibold has-text-success">Add A New Item:</h2>
+            </div>
+            
+            
+            <form action="/nowhere" id="expenseForm">
+                <div class="field">
+                    <label for="nameInput" class="label">Name:</label>
+                    <div class="control">
+                        <input class="input" minlength="2" type="text" name="nameInput" id="nameInput"
+                            placeholder="Where was the expense made?">
+                    </div>
+                </div>
+
+                <div id="dateAmountContainer" class="">
+
+                    <label for="dateInput" class="label">Date:</label>
+                    <div class="">
+                        <input type="date" name="dateInput" id="dateInput" class="input">
+                    </div>
+                    <label for="amountInput" class="label">Amount:</label>
+                    <input type="number" min=0.01 step="0.01" name="amountInput" id="amountInput" class="input">
+
+                </div>
+                <div class="has-text-centered ">
+                    <button id="addExpense" class="button is-rounded is-success mt-3">Add Expense</button>
+                </div>
+            </form>
+
+    </section>
+
+    <section   class="section pt-0 columns">
+        <div class="box has-text-centered container " id="tableContainer">
+            <table id="expenseTable" class="table table-is-bordered ">
+                <tr class="" id="tableHead" >
+                    <th scope="col" id="expenseName" class="has-text-left">Name</th>
+                    <th scope="col" id="expenseDate" class="has-text-left">Date</th>
+                    <th scope="col" id="expenseAmount" class="has-text-left">Amount</th>
+                    <th scope="col" id="expenseDelete" class="has-text-left"></th>
+                </tr>
+
+                <tr class="has-background-light">
+                    <td class="" id="expensePlaceholder" colspan="4">No Expenses Added</td>
+                </tr>
+            </table>
+        </div>
+    </section>
+
+
+    <script src="app.js"></script>
+</body>
+
+</html>

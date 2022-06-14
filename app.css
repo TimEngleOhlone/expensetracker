@@ -1,0 +1,31 @@
+#tableContainer {
+    display: flex;
+    justify-content: center;
+}
+
+#expenseTable {
+    width: 90%;
+}
+
+#tableHead {
+    width: 100% !important;
+}
+
+#expenseName {
+    width: 40% !important;
+}
+
+#expenseDate {
+    width: 20% !important;
+}
+#expenseAmount{
+    width: 20% !important;
+}
+#expenseDelete {
+    width: 20% !important;
+}
+
+/* #expensePlaceholder {
+    margin-left: 15px;
+    text-align: center !important;
+} */
